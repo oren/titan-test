@@ -36,8 +36,8 @@ var query = gremlin();
 //   })
 // });
 
-  var airport = query.var(g.addVertex({ code: 'foo' }));
-  var city = query.var(g.addVertex({ name: 'bar' }));
+  var airport = query.var(g.addVertex({ code: 'LAX' }));
+  var city = query.var(g.addVertex({ name: 'Los Angeles' }));
   query(g.addEdge(airport, city, 'in'));
 
   client.execute(query, function(err, response) {

@@ -7,8 +7,7 @@ var options = {
 var client = grex.createClient(options);
 var g = grex.g;
 
-var query = g.V('code', 'ATL');
-var query = g.V().map();
+var query = g.V().remove();
 client.fetch(query, function(err, results) {
   if(err) {
     console.error(err);
