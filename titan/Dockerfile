@@ -1,27 +1,19 @@
-FROM ubuntu:latest
+FROM java:latest
 
-MAINTAINER Abhinav Pobbati <apobbati@codeblock.io>
+MAINTAINER Eric Lubow <eric@lubow.org>
 
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository -y ppa:webupd8team/java
-RUN apt-get update
+LABEL Description="Titan Graph DB with Gremlin to be used with Cassandra and Elasticsearch" Version="1.0" Tags="cassandra,elasticsearch,graph,gremlin,titan"
 
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+WORKDIR /opt/titan-0.9.0-M2-hadoop1
 
-RUN apt-get install -y unzip curl oracle-java8-installer
-
-WORKDIR /opt/titan-0.5.4-hadoop2
-
-RUN curl -o /opt/titan.zip http://s3.thinkaurelius.com/downloads/titan/titan-0.5.4-hadoop2.zip
+RUN curl -o /opt/titan.zip http://s3.thinkaurelius.com/downloads/titan/titan-0.9.0-M2-hadoop1.zip
 
 RUN unzip /opt/titan.zip -d /opt/ && \
     rm /opt/titan.zip
 
-ADD rexster-titan.xml.template /opt/titan-0.5.4-hadoop2/
-ADD run.sh /opt/titan-0.5.4-hadoop2/
+ADD run.sh /opt/titan-0.9.0-M2-hadoop1/
 
 EXPOSE 8182
-EXPOSE 8183
 EXPOSE 8184
 
-CMD ["/bin/sh", "-e", "/opt/titan-0.5.4-hadoop2/run.sh"]
+CMD ["/bin/sh", "-e", "/opt/titan-0.9.0-M2-hadoop1/run.sh"]

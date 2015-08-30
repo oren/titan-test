@@ -5,6 +5,8 @@ titan:
     - cassandra
   ports:
     - "8182:8182"
+    - "8183:8183"
+    - "8184:8184"
   restart: always
 
 elasticsearch:
@@ -12,5 +14,5 @@ elasticsearch:
   restart: always
 
 cassandra:
-  image: cassandra:2.1
+  image: spotify/cassandra
   restart: always
