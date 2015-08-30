@@ -2,9 +2,11 @@
 
 ## Run Titan
 
-`git clone https://github.com/oren/titan.git`  
-`cd titan`  
-`bin/run`
+```
+git clone https://github.com/oren/titan.git
+cd titan
+bin/run
+```
 
 ## Resources
 
