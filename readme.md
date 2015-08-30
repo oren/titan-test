@@ -5,7 +5,7 @@
 ```
 git clone https://github.com/oren/titan.git
 cd titan
-bin/run
+docker-compose up
 ```
 
 ## Resources

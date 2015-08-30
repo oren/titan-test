@@ -1,0 +1,16 @@
+titan:
+  build: titan
+  links:
+    - elasticsearch
+    - cassandra
+  ports:
+    - "8182:8182"
+  restart: always
+
+elasticsearch:
+  image: elasticsearch:1.5
+  restart: always
+
+cassandra:
+  image: cassandra:2.1
+  restart: always
