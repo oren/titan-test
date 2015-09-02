@@ -2,7 +2,7 @@
   "name": "titan-test",
   "version": "1.0.0",
   "description": "## Run Titan",
-  "main": "create-airports.js",
+  "main": "titan-test",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,9 +17,6 @@
   },
   "homepage": "https://github.com/oren/titan-test#readme",
   "dependencies": {
-    "gremlin-client": "^1.0.0",
-    "grex": "^0.8.0",
-    "lodash": "^3.10.1",
-    "lodash.isarray": "^3.0.4"
+    "gremlin-client": "^1.0.0"
   }
 }

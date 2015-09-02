@@ -1,4 +1,4 @@
-# Test Titan
+# Titan 0.9 in Docker
 
 ## Run Titan
 
@@ -8,12 +8,21 @@ cd titan
 docker-compose up
 ```
 
+## Run Gremlin client
+
+```
+npm install
+node get-all.js
+ Error: socket hang up
+```
+
+## Gremlin console
+
+    bin/gremlin
+
 ## Resources
 
-* [Titan docs](http://s3.thinkaurelius.com/docs/titan/0.9.0-M2)
+* [Titan 0.9 docs](http://s3.thinkaurelius.com/docs/titan/0.9.0-M2)
 * [TinkerPop 3.x docs](http://tinkerpop.incubator.apache.org/docs/3.0.0-incubating)
-* [grex](https://github.com/jbmusso/grex) - Rexter client for Node.js
-* [Rexter documentation](https://github.com/tinkerpop/rexster/wiki)
-* [Rexster HTTP endpionts](https://github.com/tinkerpop/rexster/wiki/Basic-REST-API)
-* [Docker repository](https://github.com/apobbati/titan-rexster)
+* [Titan google group](https://groups.google.com/forum/#!forum/aureliusgraphs)
 * [Gremlin google group](https://groups.google.com/forum/#!forum/gremlin-users)

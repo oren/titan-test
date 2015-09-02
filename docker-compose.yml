@@ -10,7 +10,7 @@ titan:
   restart: always
 
 elasticsearch:
-  image: elasticsearch:1.5
+  image: elasticsearch
   restart: always
 
 cassandra:

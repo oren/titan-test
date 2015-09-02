@@ -1,18 +1,12 @@
-var grex = require('grex');
-var options = {
-  host: 'localhost',
-  port: 8182,
-  graph: 'graph'
-}
-var client = grex.createClient(options);
-var g = grex.g;
+var gremlin = require('gremlin-client');
+var client = gremlin.createClient(8182, 'localhost');
 
-// var query = g.V('code', 'ATL');
-var query = g.V().map();
-client.fetch(query, function(err, results) {
-  if(err) {
-    console.error(err);
-  }
+var query = client.stream('g.V()');
 
-  console.log('results:', results);
+query.on('data', function(result) {
+  console.log(result);
+});
+
+query.on('end', function() {
+  console.log("All results fetched");
 });
