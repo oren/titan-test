@@ -16,6 +16,8 @@ node get-all.js
 Error: socket hang up
 ```
 
+note: on linux you'll have to lowercase 'isarray' in node_modules/gremlin-client/src/executehandler.js ([fix](https://github.com/jbmusso/gremlin-client/pull/13) is about to get merged).
+
 ## Gremlin console
 
     bin/gremlin
