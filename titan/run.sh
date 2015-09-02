@@ -30,8 +30,10 @@ wait_for_startup() {
     return 1
 }
 
-IN=rexster-titan.xml.template
-OUT=rexster-titan.xml
+# IN=rexster-titan.xml.template
+# OUT=rexster-titan.xml
+IN=gremlin-server.yaml.template
+OUT=gremlin-server.yaml
 
 cp $IN $OUT
 

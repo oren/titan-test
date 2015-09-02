@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/oren/titan-test#readme",
   "dependencies": {
-    "grex": "^0.8.0"
+    "gremlin-client": "^1.0.0",
+    "grex": "^0.8.0",
+    "lodash": "^3.10.1",
+    "lodash.isarray": "^3.0.4"
   }
 }
