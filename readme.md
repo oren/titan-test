@@ -13,7 +13,7 @@ docker-compose up
 ```
 npm install
 node get-all.js
- Error: socket hang up
+Error: socket hang up
 ```
 
 ## Gremlin console
