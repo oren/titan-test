@@ -15,6 +15,10 @@ npm install
 node get-all.js
 Error: socket hang up
 ```
+```
+curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: localhost" -H "Origin: http://localhost:8182" http://localhost:8182/gremlin?gremlin=100-1
+curl: (7) Failed to connect to localhost port 8182: Connection refused
+```
 
 note: on linux you'll have to lowercase 'isarray' in node_modules/gremlin-client/src/executehandler.js ([fix](https://github.com/jbmusso/gremlin-client/pull/13) is about to get merged).
 
